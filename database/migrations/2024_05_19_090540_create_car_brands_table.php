@@ -11,19 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('car_brands', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('photo');
-            $table->timestamps();
-        });
+        DB::statement('
+        CREATE TABLE car_brands (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            photo VARCHAR(255) NOT NULL,
+            created_at TIMESTAMP NULL DEFAULT NULL,
+            updated_at TIMESTAMP NULL DEFAULT NULL
+        );
+    ');
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('car_brands');
+        DB::statement('DROP TABLE IF EXISTS car_brands');
     }
+
 };

@@ -82,7 +82,7 @@ return [
             if($user->isSeller()){
                 return route('seller.cars.index');
             }elseif($user->isAdmin()){
-                return route('admin.cars.index');
+                return route('seller.cars.index');
             }
         },
 

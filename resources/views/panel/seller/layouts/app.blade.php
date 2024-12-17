@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TF-RentACar</title>
+    <title>Sahibinden</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -60,7 +60,7 @@
     </div>
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
-            <a href="#" class="navbar-brand"><h1 class="text-danger display-6">TF-RentACar</h1></a>
+            <a href="#" class="navbar-brand"><h1 class="text-danger display-6">Sahibinden</h1></a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars text-danger"></span>
             </button>
@@ -68,11 +68,11 @@
                 <div class="navbar-nav mx-auto">
                     <a href="{{route('seller.cars.index')}}" class="nav-item nav-link {{ request()->routeIs('cars.index') ? 'active' : '' }}">Ana Sayfa</a>
                     <a href="{{route('seller.cars.create')}}" class="nav-item nav-link {{ request()->routeIs('cars.create') ? 'active' : '' }}">İlan Ver</a>
-                    <a href="#" class="nav-item nav-link {{ request()->routeIs('admin.brand.index') ? 'active' : '' }}">Arabalarım</a>
+                    
 
                 </div>
                 <div class="d-flex m-3 me-0">
-                    <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-dark"></i></button>
+
 
 
                     <div class="dropdown">
@@ -156,7 +156,7 @@
             <div class="row g-4">
                 <div class="col-lg-3">
                     <a href="#">
-                        <h1 class="text-danger mb-0">TF-RentACar</h1>
+                        <h1 class="text-danger mb-0">Sahibinden</h1>
                         <p class="text-secondary mb-0">Kalitenin adresi</p>
                     </a>
                 </div>

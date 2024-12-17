@@ -11,19 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cities', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->integer('plate_no');
-            $table->timestamps();
-        });
+        DB::statement('
+        CREATE TABLE cities (
+            id SERIAL PRIMARY KEY,
+            title VARCHAR(255) NOT NULL,
+            plate_no INTEGER NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+    ');
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('cities');
+        DB::statement('
+        DROP TABLE IF EXISTS cities;
+    ');
     }
+
 };

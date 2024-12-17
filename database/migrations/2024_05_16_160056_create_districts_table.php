@@ -11,22 +11,28 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('districts', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('city_id');
-            $table->string('name');
-            $table->timestamps();
-
-            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
-
-        });
+        DB::statement('
+        CREATE TABLE districts (
+            id SERIAL PRIMARY KEY,
+            city_id BIGINT NOT NULL,
+            name VARCHAR(255) NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            CONSTRAINT fk_city_id FOREIGN KEY (city_id) REFERENCES cities(id) ON DELETE CASCADE
+        );
+    ');
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('districts');
+        DB::statement('
+        ALTER TABLE districts DROP CONSTRAINT IF EXISTS fk_city_id;
+        DROP TABLE IF EXISTS districts;
+    ');
     }
+
 };

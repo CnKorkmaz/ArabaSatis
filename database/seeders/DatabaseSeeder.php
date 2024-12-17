@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             CitySeed::class,
-            DistrictSeed::class
+            DistrictSeed::class,
+            CarBrandsSeeder::class,
+            CarModelsSeeder::class,
         ]);
     }
 }
