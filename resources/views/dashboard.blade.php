@@ -5,9 +5,6 @@
     </x-slot>
 <div class="padding 10">
 
-    <a href=" /seller/cars/index">Anasayfa</ahref>
-
-
 </div>
 
 </x-app-layout>

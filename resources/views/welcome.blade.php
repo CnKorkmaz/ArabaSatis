@@ -29,6 +29,8 @@
             <a href="{{ route('login') }}" class="w-full block py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300 text-center text-lg font-semibold shadow-md">
                 Log In
             </a>
+
+            <br>
             <!-- Create Account Button -->
             <a href="{{ route('register') }}" class="w-full block py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300 text-center text-lg font-semibold shadow-md">
                 Create Account
